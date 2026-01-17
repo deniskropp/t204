@@ -1,0 +1,39 @@
+⫻task/id: T-20260117-003
+⫻task/title: Implement Klipper SDK (Python)
+⫻task/author: Lyra (Methodologist)
+⫻task/recipient: Sage (Builder)
+⫻task/status: Open
+⫻task/priority: High
+⫻task/date: 2026-01-17
+
+⫻context/background:
+The Klipper SDK has been specified (`specs/Klipper_SDK_FRD.md`) and architected (`specs/Klipper_SDK_Architecture.md`). The design defines a Python-based client communicating via D-Bus with a defined API surface.
+
+⫻context/inputs:
+- `specs/Klipper_SDK_Architecture.md`: The technical blueprint.
+- `specs/Klipper_SDK_FRD.md`: The requirements.
+
+⫻objectives/primary:
+1. **Scaffold Project:**
+   - Initialize a modern Python project structure (using `poetry` or `pyproject.toml`).
+   - Create `src/klipper_sdk` and `tests/`.
+
+2. **Implement Core Client:**
+   - Create `KlipperClient` class.
+   - Implement D-Bus connection logic (using `dbus-python` or `pydbus`).
+
+3. **Implement Controllers:**
+   - Develop `ClipboardController` (get/set/clear).
+   - Develop `HistoryManager` (get_items, add_item).
+   - *Note:* Mock the D-Bus responses for initial testing if the KDE environment is not available in the shell.
+
+4. **Verify:**
+   - Create a basic test suite to verify object instantiation and method signatures.
+
+⫻constraints:
+- Use Type Hints (PEP 484).
+- Ensure error handling for missing D-Bus service.
+- Follow the defined Architecture strictly.
+
+⫻resources:
+- `specs/Klipper_SDK_Architecture.md`

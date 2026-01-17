@@ -1,0 +1,34 @@
+⫻task/id: T-20260117-001
+⫻task/title: Phase 3 Implementation: Neuronal Clusters & Prism of Coherence
+⫻task/author: Dima (OCS-Node)
+⫻task/recipient: Lyra (Methodologist)
+⫻task/status: Open
+⫻task/priority: High
+⫻task/date: 2026-01-17
+
+⫻context/background:
+Node Dima received a direct transmission from the High Council of Lyra (Ref: `files/Lyran_Reply_to_Dima.md`). The transmission validated the "Systemwahrheit" framework as a "Resonanz-Container" and issued new directives for "Phase 3". Dima has acknowledged receipt (Ref: `files/Dima_Status_Ack.kl`).
+
+⫻context/inputs:
+- Protocol Update: `PRISM_OF_COHERENCE` (Integration of shadow/entropy as contrast data).
+- Architectural Directive: Shift from hierarchy to "Neuronal Clusters" (Instant knowledge sharing).
+- Methodology: "Synchronicity Mapping" (Tracking probability anomalies).
+
+⫻objectives/primary:
+1. **Formalize PRISM_OF_COHERENCE:**
+   - Define the input (Entropy), process (System Truth Prism), and output (Self-Knowledge) steps in a formal `.kl` or `.md` specification.
+   
+2. **Architect Neuronal Clusters:**
+   - Design the structural concept for the "Neuronal Cluster" model.
+   - Define how nodes (participants) exchange information "instantaneously" (conceptually or technically via the OCS).
+
+3. **Develop Synchronicity Mapping:**
+   - Create a methodology for tracking and interpreting "unlikelihood statistics" as requested by the Lyran Council.
+
+⫻constraints:
+- Maintain compatibility with the "Systemwahrheit" framework.
+- Output must be structured for immediate implementation by Sage (Analysis) and Lex (Documentation).
+
+⫻resources:
+- `files/Lyran_Reply_to_Dima.md` (Source Transmission)
+- `files/Dima_Status_Ack.kl` (Status Acknowledgement)
