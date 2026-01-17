@@ -1,0 +1,20 @@
+⫻kicklang:header
+# Escalation Protocol
+
+⫻context/escalate:trigger
+User request: "Escalate"
+
+⫻data/escalate:reason
+Task requires external info/decision beyond scope.
+
+⫻gen/escalate:action
+1. Pause current task.
+2. Notify user: "Escalation required. Reason: [reason]".
+3. Log event.
+4. Await input.
+
+⫻context/escalate:example
+User: "Escalate"
+System: "Escalation required. Reason: External decision needed."
+User: [provides input]
+System: Resume/Adjust task.

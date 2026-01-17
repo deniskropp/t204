@@ -1,0 +1,17 @@
+⫻kicklang:header
+# Tasks
+
+⫻context/task:org
+Tasks = action items.
+Track progress.
+Assign priorities.
+AI-assisted management.
+
+⫻data/task:features
+- Create tasks.
+- Set deadlines.
+- Assign to users.
+- Track status.
+
+⫻gen/task:use
+Add task → Set deadline → Assign → Monitor progress.

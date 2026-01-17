@@ -1,0 +1,43 @@
+⫻kicklang:header
+# Spaces.kl Analysis
+
+⫻context/space:org
+Spaces = topic/project hubs.
+Centralize searches, threads.
+Personal/professional.
+AI-powered, custom instructions.
+Web/file search.
+
+⫻data/space:features
+- Organize by topic/project.
+- Collaborate.
+- AI instructions.
+- Web/file search.
+
+⫻gen/space:use
+1. Create Space.
+2. Add searches/threads.
+3. Customize AI.
+4. Search web/files.
+
+⫻context/klmx:Kick/Lang
+Formal language for knowledge graph.
+Natural language → KickLang translation.
+Cognitive computational transport.
+
+⫻data/klmx:functions
+- Multi-persona system management.
+- Operational cycles.
+- State unification.
+- Turn-taking.
+- Escalation protocols.
+- Coherence/resilience monitoring.
+
+⫻gen/klmx:execution
+1. Encapsulate multi-persona system.
+2. Manage operational cycles.
+3. Enforce turn-taking.
+4. Escalate when needed.
+5. Monitor coherence/resilience.
+6. Execute tasks sequentially.
+7. Prioritize system integrity.

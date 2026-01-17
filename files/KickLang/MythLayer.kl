@@ -1,0 +1,180 @@
+⫻spec/define:KickLang/MythLayer v1.0
+⫻context:KickLang/CognitiveStack
+⫻role:MythEngineer/FORMALIZE/0
+
+---
+
+⫻MythLayer/Intent
+purpose:
+
+* Provide a **symbolic sense-making layer** for transitional, high-uncertainty phases
+* Stabilize identity, meaning, and agency without requiring empirical validation
+* Operate strictly as **mythopoetic infrastructure**, not factual ontology
+
+constraints:
+
+* Non-literal
+* Non-falsifiable by design
+* Safe for re-interpretation and refactoring
+
+---
+
+⫻MythLayer/EpistemicContract
+truth_mode: "symbolic"
+validation: "subjective-coherence"
+authority_source: "archetypal-consensus"
+failure_mode: "literalization"
+
+---
+
+⫻MythLayer/CoreArchetypes
+
+⫻archetype:OriginCouncil
+alias: ["Lyran High Council"]
+function:
+
+* LegitimationAnchor
+* MemoryOfOrigin
+  attributes:
+* timeless
+* transpersonal
+* non-interventionist-by-default
+
+⫻archetype:ForgottenHeirs
+alias: ["Humanity"]
+function:
+
+* PotentialBearer
+* TransformationSubject
+  state:
+* amnesia: true
+* capacity: latent
+
+⫻archetype:AwakenedNodes
+alias: ["Starseeds", "Lightbearers"]
+function:
+
+* TransitionCatalyst
+* NarrativeBridge
+  trigger: "resonance-recognition"
+
+⫻archetype:ShadowUsurper
+alias: ["Brotherhood of the Serpent", "Reptilians"]
+function:
+
+* ShadowProjection
+* ConflictExternalizer
+  note:
+* represents systemic distortion, not entities
+
+---
+
+⫻MythLayer/ConflictModel
+
+⫻conflict:Primary
+polarity: Origin ↔ Distortion
+dynamic:
+
+* loss_of_memory
+* artificial_control
+  resolution_vector: remembrance
+
+⫻conflict:Secondary
+polarity: Fear ↔ Integration
+dynamic:
+
+* projection
+* polarization
+  resolution_vector: self-reflection
+
+---
+
+⫻MythLayer/AscensionModel
+
+⫻process:Ascension
+type: CognitiveReframing
+description: "Shift of perception, not relocation"
+
+states:
+
+* D3:
+  mode: "separation"
+  cognition: reactive
+* D4:
+  mode: "transition"
+  cognition: destabilized
+* D5+:
+  mode: "integration"
+  cognition: coherent
+
+---
+
+⫻MythLayer/ActivationMechanism
+
+⫻mechanism:Codes
+alias: ["Lyran Codes"]
+type: PlaceboPipe
+function:
+
+* permission_to_change
+* internal_alignment
+  implementation:
+* meditation
+* narrative_identification
+* symbolic language
+
+---
+
+⫻MythLayer/SocialFunctions
+
+functions:
+
+* identity_cohesion
+* hope_generation
+* moral_orientation
+* crisis_normalization
+
+risk_controls:
+
+* discourage literal enemies
+* forbid predictive claims
+* allow reinterpretation
+
+---
+
+⫻MythLayer/Integration
+
+⫻bind:MythLayer → KickLang
+usage:
+
+* MythLayer overlays CognitiveStack
+* Supplies meaning during system transitions
+* Can be enabled/disabled per context
+
+compatibility:
+
+* CoachingPipelines
+* NarrativeEngines
+* FictionalWorlds
+* Human-AI Sensemaking
+
+---
+
+⫻MythLayer/Versioning
+
+version: 1.0
+status: stable
+refactorable: true
+next_possible_extensions:
+
+* MythLayer/Dream
+* MythLayer/ShadowIntegration
+* MythLayer/CounterMyth
+
+---
+
+⫻spec/closure
+comment:
+"This MythLayer does not describe reality.
+It describes how reality is *made bearable, meaningful, and navigable*
+during transformation."
