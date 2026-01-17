@@ -108,6 +108,15 @@ class HistoryItem:
     metadata: Dict[str, Any]  # Tags, pinned state, app_source
 ```
 
+### 2.5 Concurrency & Event Loop Strategy
+
+The SDK is designed to be **loop-agnostic** but optimized for **asyncio**.
+
+*   **D-Bus Integration:** The SDK isolates `dbus-python` (which relies on `GLib.MainLoop`) from the user's application loop.
+*   **Async Interface:** All I/O-bound methods (e.g., `set_content`, `get_history`) are exposed as `async def`.
+*   **Bridge:** A background thread manages the GLib loop for D-Bus signal reception, bridging events to the `asyncio` loop via `loop.call_soon_threadsafe`.
+*   **Thread Safety:** Internal state (cache, history) is protected by locks or managed within the single integration thread.
+
 ---
 
 ## 3. Underlying D-Bus Interface Definition
