@@ -1,0 +1,34 @@
+⫻task/id: T-20260118-001
+⫻task/title: Orchestrate and Stabilize Klipper SDK
+⫻task/author: System (Handoff)
+⫻task/recipient: Orchestrator
+⫻task/status: Open
+⫻task/priority: High
+⫻task/date: 2026-01-18
+
+⫻context/background:
+The Klipper SDK implementation has begun (`src/klipper_sdk` exists). A new orchestration file `klipper-sdk/klipper_sdk_orchestration.kl` has been introduced to guide the development but is currently untracked. The previous task T-20260117-003 focused on scaffolding and core clients.
+
+⫻context/inputs:
+- `klipper-sdk/klipper_sdk_orchestration.kl`: The new master plan.
+- `klipper-sdk/src/klipper_sdk/`: Current codebase.
+
+⫻objectives/primary:
+1. **System Integration:**
+   - Commit the `klipper-sdk/klipper_sdk_orchestration.kl` file to git.
+
+2. **Orchestration Alignment:**
+   - Review the current code (`client.py`, `controllers.py`, `bridge.py`) against the "design_sdk_architecture" and "implement_sdk" phases in the orchestration file.
+   - Update `klipper-sdk/klipper_sdk_orchestration.kl` status if necessary (e.g., mark steps as completed).
+
+3. **Implementation Continuation:**
+   - Proceed with `implement_api_endpoints` and `integrate_ui_components` as defined in the `implement_sdk` structural plane.
+   - Ensure unit tests (`tests/`) are passing and cover the existing modules.
+
+⫻constraints:
+- Maintain strict alignment with `klipper_sdk_orchestration.kl`.
+- Ensure all new code is covered by tests.
+
+⫻resources:
+- `klipper-sdk/klipper_sdk_orchestration.kl`
+- `specs/Klipper_SDK_Architecture.md`
