@@ -84,7 +84,7 @@ class PrismProtocol:
         
         # Handle Exception signals (high entropy)
         if isinstance(payload, Exception):
-            return self._process_entropy(payload, "Exception")
+            return self._process_entropy(payload, f"Exception:{type(payload).__name__}")
         
         # Handle error-like signals
         if isinstance(payload, str) and ("error" in payload.lower() or "exception" in payload.lower()):

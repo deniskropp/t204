@@ -12,18 +12,22 @@
             description: Collect all necessary functional features for the SDK.
             goal: "Identify and document all core functionalities of the Klipper SDK."
             agent: GPTASe
+            status: completed
           - name: gather_non_functional_requirements
             description: Collect all necessary non-functional aspects (performance, security, etc.) for the SDK.
             goal: "Identify and document all non-functional requirements for the Klipper SDK."
             agent: TASe
+            status: completed
           - name: consolidate_requirements
             description: Combine functional and non-functional requirements into a single document.
             goal: "Create a unified requirements document for the Klipper SDK."
             agent: uTASe
+            status: completed
           - name: purify_requirements
             description: Refine and validate the consolidated requirements for clarity and completeness.
             goal: "Ensure the requirements are unambiguous, complete, and feasible."
             agent: puTASe
+            status: completed
       - name: design_sdk_architecture
         description: Design the overall architecture of the Klipper SDK.
         goal: "Create a robust and scalable architecture for the Klipper SDK."
@@ -34,18 +38,22 @@
             description: Identify and propose suitable architectural patterns for the SDK.
             goal: "Select appropriate architectural patterns that align with SDK requirements."
             agent: Lyra
+            status: completed
           - name: define_api_interfaces
             description: Define the public API interfaces for the SDK.
             goal: "Specify clear and well-documented API endpoints for SDK users."
             agent: Lyra
+            status: completed
           - name: design_data_models
             description: Design the data models and structures for the SDK.
             goal: "Establish efficient and consistent data representations within the SDK."
             agent: Lyra
+            status: completed
           - name: create_ui_ux_flows
             description: Design the user interface and user experience flows for any associated UI components.
             goal: "Develop intuitive and visually appealing UI/UX for Klipper SDK integrations."
             agent: Aurora
+            status: pending
       - name: implement_sdk
         description: Implement the Klipper SDK based on the defined architecture and requirements.
         goal: "Develop a functional and high-quality Klipper SDK."
@@ -56,22 +64,27 @@
             description: Configure the necessary tools and environments for SDK development.
             goal: "Establish a productive and efficient development setup."
             agent: Kodax
+            status: completed
           - name: develop_core_modules
             description: Implement the core functionalities of the SDK.
             goal: "Build the foundational components of the Klipper SDK."
             agent: Kodax
+            status: completed
           - name: implement_api_endpoints
             description: Implement the defined API interfaces.
             goal: "Translate API interface designs into functional code."
             agent: Kodax
+            status: in_progress
           - name: integrate_ui_components
             description: Integrate the designed UI/UX components.
             goal: "Incorporate the visual and interactive elements into the SDK."
             agent: Kodax
+            status: pending
           - name: write_unit_tests
             description: Write comprehensive unit tests for all implemented modules.
             goal: "Ensure code quality and identify defects early."
             agent: Kodax
+            status: in_progress
       - name: test_and_refine_sdk
         description: Test the implemented SDK and refine based on feedback.
         goal: "Ensure the SDK is stable, performant, and meets all requirements."
@@ -82,18 +95,22 @@
             description: Test the integration of different SDK modules.
             goal: "Verify seamless interaction between SDK components."
             agent: Kodax
+            status: pending
           - name: perform_performance_testing
             description: Evaluate the performance characteristics of the SDK.
             goal: "Identify and address any performance bottlenecks."
             agent: Kodax
+            status: pending
           - name: gather_user_feedback
             description: Collect feedback from potential SDK users.
             goal: "Incorporate user insights for SDK improvement."
             agent: Lyra
+            status: pending
           - name: iterate_on_sdk
             description: Make necessary adjustments and improvements to the SDK based on testing and feedback.
             goal: "Continuously enhance the SDK's quality and usability."
             agent: Kodax
+            status: pending
       - name: document_sdk
         description: Create comprehensive documentation for the Klipper SDK.
         goal: "Provide clear and thorough documentation for SDK users and developers."
@@ -104,14 +121,17 @@
             description: Document all public API endpoints and their usage.
             goal: "Create detailed and accurate API reference documentation."
             agent: Lyra
+            status: pending
           - name: write_getting_started_guide
             description: Create a guide to help new users start using the SDK.
             goal: "Facilitate easy onboarding for SDK adopters."
             agent: Lyra
+            status: pending
           - name: create_examples_and_tutorials
             description: Develop practical examples and tutorials demonstrating SDK usage.
             goal: "Provide hands-on learning resources for SDK users."
             agent: Lyra
+            status: pending
     agentic:
       - name: GPTASe
         role: 'Task-Agnostic Step (TAS) extractor'

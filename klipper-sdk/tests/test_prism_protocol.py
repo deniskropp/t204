@@ -49,7 +49,7 @@ def test_ingest_exception_signal():
         assert result.is_coherent == False
         assert result.entropy_wrapper is not None
         assert "ValueError" in result.entropy_wrapper["type"]
-        assert "Test error message" in result.entropy_wrapper["message"]
+        assert "Test error message" in result.entropy_wrapper["payload"]
         assert result.entropy_wrapper["context"] == "EntropyDetected"
         
         # Check core truth extraction

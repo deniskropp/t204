@@ -2,11 +2,20 @@ import asyncio
 import threading
 import logging
 from typing import Optional, Union, Any, Dict, List
-import dbus
-import dbus.mainloop.glib
-from gi.repository import GLib
+
+try:
+    import dbus
+    import dbus.mainloop.glib
+except ImportError:
+    dbus = None
+
+try:
+    from gi.repository import GLib
+except ImportError:
+    GLib = None
 
 from .bridge import PrismProtocol, NeuronalCluster
+from .controllers import ClipboardController, HistoryManager
 
 # Logger
 logger = logging.getLogger(__name__)
@@ -25,7 +34,7 @@ class KlipperClient:
     def __init__(self, app_id: str = "klipper-sdk"):
         self.app_id = app_id
         self._loop = asyncio.get_event_loop()
-        self._glib_loop = GLib.MainLoop()
+        self._glib_loop = GLib.MainLoop() if GLib else None
         self._glib_thread: Optional[threading.Thread] = None
         self._session_bus: Optional[dbus.SessionBus] = None
         self._proxy: Optional[dbus.Interface] = None
@@ -34,11 +43,29 @@ class KlipperClient:
         # OCS Bridge Layer
         self.prism = PrismProtocol()
         self.cluster = NeuronalCluster(node_id=app_id)
+        
+        # Controllers
+        self._clipboard = ClipboardController(self)
+        self._history = HistoryManager(self)
+
+    @property
+    def clipboard(self) -> ClipboardController:
+        """Access to current clipboard operations."""
+        return self._clipboard
+
+    @property
+    def history(self) -> HistoryManager:
+        """Access to history operations."""
+        return self._history
 
     async def connect(self):
         """Initializes the D-Bus connection."""
         if self._connected:
             return
+
+        if not dbus or not GLib:
+             logger.warning("D-Bus or GLib not available. Running in offline/mock mode.")
+             return
 
         # Setup GLib MainLoop integration for dbus-python
         dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
@@ -65,6 +92,9 @@ class KlipperClient:
 
     def _start_background_loop(self):
         """Starts the GLib MainLoop in a separate thread."""
+        if not self._glib_loop:
+            return
+
         def run_loop():
             logger.debug("Starting GLib MainLoop...")
             self._glib_loop.run()
@@ -96,6 +126,9 @@ class KlipperClient:
         if not self._connected:
             await self.connect()
         
+        if not self._proxy:
+            return ""
+
         return await self._call_dbus_method("getClipboardContents")
 
     async def set_clipboard_contents(self, content: str):
@@ -103,6 +136,9 @@ class KlipperClient:
         if not self._connected:
             await self.connect()
             
+        if not self._proxy:
+            return
+
         await self._call_dbus_method("setClipboardContents", content)
 
     async def get_history(self) -> List[str]:
@@ -124,6 +160,10 @@ class KlipperClient:
         """Clears the clipboard history."""
         if not self._connected:
             await self.connect()
+        
+        if not self._proxy:
+            return
+
         await self._call_dbus_method("clearClipboardHistory")
 
     async def _call_dbus_method(self, method_name: str, *args):
@@ -151,6 +191,6 @@ class KlipperClient:
 
     async def shutdown(self):
         """Stops the background loop and cleans up."""
-        if self._glib_loop.is_running():
+        if self._glib_loop and self._glib_loop.is_running():
             self._glib_loop.quit()
         self._connected = False

@@ -39,7 +39,7 @@ def test_prism_protocol_basic():
         assert result.is_coherent == False
         assert result.entropy_wrapper is not None
         assert "ValueError" in result.entropy_wrapper["type"]
-        assert "Test error message" in result.entropy_wrapper["message"]
+        assert "Test error message" in result.entropy_wrapper["payload"]
         print("✓ Exception signal processing works")
         
         # Test core truth extraction
