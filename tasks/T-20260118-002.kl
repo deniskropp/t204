@@ -1,0 +1,34 @@
+⫻task/id: T-20260118-002
+⫻task/title: Klipper SDK: UI Flows & API Refinement
+⫻task/author: Orchestrator
+⫻task/recipient: Kodax (Engineer)
+⫻task/status: Open
+⫻task/priority: Medium
+⫻task/date: 2026-01-18
+
+⫻context/background:
+The Klipper SDK core has been stabilized and refactored to align with the architecture (`specs/Klipper_SDK_Architecture.md`). The `Client`, `ClipboardController`, and `HistoryManager` classes are in place. The next phase involves implementing the UI/UX flows (likely for configuration or history visualization) and refining the API implementation.
+
+⫻context/inputs:
+- `klipper-sdk/klipper_sdk_orchestration.kl`: The master plan.
+- `klipper-sdk/src/klipper_sdk/`: Current codebase.
+
+⫻objectives/primary:
+1. **API Refinement:**
+   - Implement real D-Bus calls where placeholders exist (if environment allows) or robust mocks.
+   - Ensure `HistoryItem` is correctly populated from D-Bus data.
+
+2. **UI Components:**
+   - Begin implementation of `integrate_ui_components` step.
+   - Design/Implement a basic configuration UI or History Viewer using a Python GUI framework (e.g., PySide6/PyQt6 or a TUI with textual) as per `create_ui_ux_flows`.
+   - *Note:* Consult `Aurora` (Designer) agent instructions in orchestration if needed.
+
+3. **Testing:**
+   - Expand test suite to cover new UI components (headless/mocked).
+
+⫻constraints:
+- Ensure cross-platform compatibility where possible.
+- Keep dependency on `dbus-python` isolated.
+
+⫻resources:
+- `klipper-sdk/klipper_sdk_orchestration.kl`
